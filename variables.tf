@@ -33,3 +33,8 @@ variable "ttl" {
   type        = string
   description = "DNS record TTL"
 }
+
+variable "zone_map" {
+  type        = map(string)
+  description = "Map of string values of Cloudflare zone ID to Route53 zone ID"
+}
