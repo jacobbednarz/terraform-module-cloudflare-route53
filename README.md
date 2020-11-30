@@ -9,7 +9,7 @@ providers without any need for replication.
 While this is a Terraform module, you still need to set the
 default variable value for [`zone_map`](https://github.com/jacobbednarz/terraform-module-cloudflare-route53/blob/5f26e8e92301f0af13982e0172bf17c760069339/main.tf#L1-L8) for your Cloudflare zone IDs and Route53
 hosted zones. This is due to how variables are referenced and initialised and
-without a default value, the `lookup` doesn't work correctly. :fingers_crossed:
+without a default value, the `lookup` doesn't work correctly. :crossed_fingers:
 future Terraform versions fix this and it becomes possible to configure this on
 the CLI.
 
