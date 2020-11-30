@@ -1,8 +1,6 @@
-# terraform-module-cloudflare-route53
-
 This Terraform module works by unifying the interface to create and manage DNS
 records. It helps increase DNS redundancy by keeping records across two
-providers without any need for replication.
+providers (Cloudflare + Route53) without any need for replication.
 
 ## Example usage
 
@@ -22,7 +20,7 @@ provider "aws" {
 }
 
 module "example_cname" {
-  source   = "path/to/this/module"
+  source   = "jacobbednarz/cloudflare-route53/module"
   zone_map = var.zone_map
 
   zone_id  = var.cloudflare_zone_id
@@ -34,7 +32,7 @@ module "example_cname" {
 }
 
 module "example_txt" {
-  source   = "path/to/this/module"
+  source   = "jacobbednarz/cloudflare-route53/module"
   zone_map = var.zone_map
 
   zone_id  = var.cloudflare_zone_id
