@@ -30,6 +30,8 @@ provider "aws" {
 }
 
 module "example_cname" {
+  source   = "path/to/this/module"
+  
   zone_id  = var.cloudflare_zone_id
   name     = "notreal"
   value    = "example.com"
@@ -39,6 +41,8 @@ module "example_cname" {
 }
 
 module "example_txt" {
+  source   = "path/to/this/module"
+  
   zone_id  = var.cloudflare_zone_id
   name     = "_verify_something"
   value    = "some txt verification"
